@@ -52,7 +52,7 @@ let quiz = [
             "Chỉ được đốt lúc giao thừa",
             "Được nếu bố mẹ cho phép"
         ],
-        rightAnswer: 2
+        rightAnswer: 1
     ),
     Question(
         question: "Hãy cho biết trong 12 con giáp, con gì nổi tiếng nhờ phụ nữ?",
@@ -62,7 +62,7 @@ let quiz = [
             "Dê",
             "Chó"
         ],
-        rightAnswer: 1
+        rightAnswer: 0
     ),
     Question(
         question: "Loại cây đặc trưng cho ngày tết, không hoa không trái?",
@@ -71,7 +71,7 @@ let quiz = [
             "Cây Đào",
             "Cây Nêu",
         ],
-        rightAnswer: 3
+        rightAnswer: 2
     ),
     Question(
         question: "Tại sao có tục dựng cây nêu ngày Tết?",
@@ -80,7 +80,7 @@ let quiz = [
             "Chống lại sự quấy nhiễu của ma quỷ",
             "Để mang lại niềm vui cho gia đình",
         ],
-        rightAnswer: 1
+        rightAnswer: 0
     ),
     Question(
         question: "Con gì lúc 12 giờ khuya thì có đêm thay đổi kích thước từ nhỏ sang to hay ngược lại?",
@@ -91,6 +91,6 @@ let quiz = [
             "Con hổ",
             "Con rắn",
         ],
-        rightAnswer: 1
+        rightAnswer: 0
     )
 ]

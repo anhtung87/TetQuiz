@@ -21,13 +21,19 @@ class ResultRouter: ResultRoutingLogic, ResultDataPassing {
     weak var viewController: ResultViewController?
     
     func routeToQuizScene() {
+        dataStore!.dataStore = quiz
+        let index = viewController!.navigationController!.viewControllers.count - 2
+        let destinationVC = viewController?.navigationController?.viewControllers[index] as! QuizViewController
+        var destinationDS = destinationVC.router!.dataStore!
         navigateToQuizScene()
+        passingDataToQuiz(source: dataStore!, target: &destinationDS)
     }
     
     func navigateToQuizScene() {
-        let index = viewController!.navigationController!.viewControllers.count - 2
-        let destinationVC = viewController?.navigationController?.viewControllers[index] as! QuizViewController
-        destinationVC.resetQuestions()
         viewController?.navigationController?.popViewController(animated: true)
+    }
+    
+    func passingDataToQuiz(source: ResultDataStore, target: inout QuizDataStore) {
+        target.questions = source.dataStore
     }
 }
